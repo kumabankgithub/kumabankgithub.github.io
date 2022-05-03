@@ -126,10 +126,33 @@ color:#C012D1;
 }
 
     
+    
 .hero-container .hero-description{
 font-size:1.25em;
 text-align: center !important;
 }
+    
+    .hero-container .hero-img{
+width:calc(100% - 12px);
+}
+    
+    .hero-container .hero-img-wrapper{
+position:relative;
+}
+    
+     .hero-img-wrapper::before{
+ content: "";
+         position:absolute;
+         top:12px;
+         left:12px;
+         width:calc(100% - 12px);
+         height:100%;
+         border:2px solid #C012D1;
+         border-radius:1em;
+         z-index:-1;
+         /*background:#C012D1;*/
+}
+
 
 .hero-container .buy-button{
 color: #000000;
@@ -156,7 +179,7 @@ background-color: transparent;
 position: relative;
 z-index: 1;
 overflow: hidden;
-border: solid 1px #C012D1;
+border: solid 2px #C012D1;
 border-radius:1em;
 padding:16px 20px;
 font-weight:600;
@@ -675,7 +698,7 @@ background-repeat: no-repeat;
 <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center" data-aos="fade-right">
 
 <h1 class="hero-title text-center">Kuma Bank</h1>
-<img class="img-fluid d-block d-none " src="images/shibam-text.png" style="max-height:70px;">
+
 <p class="hero-description mt-1">Kuma Bank is a hyper-deflationary, community-driven token on the Binance Smart Chain.</p>
 <div class="d-flex flex-column flex-sm-row mt-3">
 <a type="button" class="buy-button btn btn-primary m-2 " href="#" target="_blank">Buy On Pancakeswap</a>
@@ -683,7 +706,7 @@ background-repeat: no-repeat;
 </div>
 </div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" data-aos="fade-left" style="position:relative;">
 
-<img class="img-fluid hero-img p-4 " src="images/kumabank-3.png" style="width:100%;background:#FFFFFF;border-radius:1em;">
+<div class="hero-img-wrapper"><img class="hero-img p-4 " src="images/kumabank-3.png" style="background:#FFFFFF;border-radius:1em;"></div>
 
 
 
@@ -1085,6 +1108,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
